@@ -274,7 +274,7 @@ const Contact = () => {
                 </span>
               </div>
               <p className="text-gray-300 text-sm">
-                Currently seeking internships and entry-level positions. 
+                Currently seeking internships and entry-level positions.
                 Response time: Usually within 24 hours.
               </p>
             </div>
@@ -288,8 +288,9 @@ const Contact = () => {
               Ready to Connect?
             </h3>
             <p className="text-gray-400 mb-6 max-w-2xl mx-auto">
-              Whether you have an internship opportunity, project collaboration, 
-              or just want to connect, I'm always excited to hear from fellow developers and potential mentors.
+              Whether you have an internship opportunity, project collaboration,
+              or just want to connect, I'm always excited to hear from fellow
+              developers and potential mentors.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <a

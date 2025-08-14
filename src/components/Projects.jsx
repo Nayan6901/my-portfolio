@@ -146,7 +146,7 @@ const Projects = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-green-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-indigo-400 via-slate-300 to-gray-400 bg-clip-text text-transparent">
               Featured Projects
             </span>
           </h2>
@@ -164,7 +164,7 @@ const Projects = () => {
               onClick={() => setFilter(category.id)}
               className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
                 filter === category.id
-                  ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white"
+                  ? "bg-gradient-to-r from-indigo-600 to-slate-600 text-white"
                   : "bg-slate-800/50 text-gray-400 hover:text-white hover:bg-slate-700/50"
               }`}
             >
@@ -178,17 +178,17 @@ const Projects = () => {
           {featuredProjects.slice(0, 2).map((project) => (
             <div
               key={project.id}
-              className="group bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl overflow-hidden hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105"
+              className="group bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl overflow-hidden hover:border-indigo-500/50 transition-all duration-300 hover:transform hover:scale-105"
             >
               {/* Project Image/Icon */}
-              <div className="h-48 bg-gradient-to-br from-blue-600/20 via-purple-600/20 to-cyan-600/20 flex items-center justify-center text-6xl">
+              <div className="h-48 bg-gradient-to-br from-indigo-600/20 via-slate-600/20 to-gray-600/20 flex items-center justify-center text-6xl">
                 {project.image}
               </div>
 
               <div className="p-6">
                 {/* Project Header */}
                 <div className="flex items-start justify-between mb-4">
-                  <h3 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors">
+                  <h3 className="text-xl font-bold text-white group-hover:text-indigo-400 transition-colors">
                     {project.title}
                   </h3>
                   <span
@@ -213,7 +213,7 @@ const Projects = () => {
                     {project.tech.map((tech, index) => (
                       <span
                         key={index}
-                        className="px-3 py-1 bg-blue-500/10 border border-blue-500/30 text-blue-400 text-sm rounded-full"
+                        className="px-3 py-1 bg-indigo-500/10 border border-indigo-500/30 text-indigo-400 text-sm rounded-full"
                       >
                         {tech}
                       </span>
@@ -246,7 +246,7 @@ const Projects = () => {
                   {project.live && (
                     <a
                       href={project.live}
-                      className="flex-1 flex items-center justify-center py-2 px-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white rounded-lg transition-all duration-300"
+                      className="flex-1 flex items-center justify-center py-2 px-4 bg-gradient-to-r from-indigo-600 to-slate-600 hover:from-indigo-700 hover:to-slate-700 text-white rounded-lg transition-all duration-300"
                     >
                       Live Demo
                     </a>
@@ -264,7 +264,7 @@ const Projects = () => {
             .map((project) => (
               <div
                 key={project.id}
-                className="group bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl overflow-hidden hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105"
+                className="group bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl overflow-hidden hover:border-indigo-500/50 transition-all duration-300 hover:transform hover:scale-105"
               >
                 {/* Project Icon */}
                 <div className="h-32 bg-gradient-to-br from-slate-700 to-slate-800 flex items-center justify-center text-3xl">
@@ -274,7 +274,7 @@ const Projects = () => {
                 <div className="p-4">
                   {/* Project Header */}
                   <div className="flex items-start justify-between mb-3">
-                    <h3 className="text-lg font-bold text-white group-hover:text-blue-400 transition-colors">
+                    <h3 className="text-lg font-bold text-white group-hover:text-indigo-400 transition-colors">
                       {project.title}
                     </h3>
                     <span
@@ -299,7 +299,7 @@ const Projects = () => {
                       {project.tech.slice(0, 3).map((tech, index) => (
                         <span
                           key={index}
-                          className="px-2 py-1 bg-blue-500/10 text-blue-400 text-xs rounded"
+                          className="px-2 py-1 bg-indigo-500/10 text-indigo-400 text-xs rounded"
                         >
                           {tech}
                         </span>
@@ -323,7 +323,7 @@ const Projects = () => {
                     {project.live && (
                       <a
                         href={project.live}
-                        className="flex-1 text-center py-2 px-3 bg-blue-600 hover:bg-blue-700 text-white text-sm rounded transition-colors duration-300"
+                        className="flex-1 text-center py-2 px-3 bg-indigo-600 hover:bg-indigo-700 text-white text-sm rounded transition-colors duration-300"
                       >
                         Demo
                       </a>
@@ -336,7 +336,7 @@ const Projects = () => {
 
         {/* Call to Action */}
         <div className="text-center mt-16">
-          <div className="bg-gradient-to-r from-slate-800/50 via-blue-900/20 to-slate-800/50 rounded-xl p-8 border border-blue-500/20">
+          <div className="bg-gradient-to-r from-slate-800/50 via-indigo-900/20 to-slate-800/50 rounded-xl p-8 border border-indigo-500/20">
             <h3 className="text-2xl font-bold text-white mb-4">
               Interested in Working Together?
             </h3>
@@ -346,7 +346,7 @@ const Projects = () => {
             </p>
             <a
               href="#contact"
-              className="inline-block px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 hover:scale-105"
+              className="inline-block px-8 py-3 bg-gradient-to-r from-indigo-600 to-slate-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-slate-700 transition-all duration-300 hover:scale-105"
             >
               Start a Project
             </a>

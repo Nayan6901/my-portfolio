@@ -149,26 +149,26 @@ const Hero = () => {
           >
             <div className="text-center group hover:scale-105 transition-transform duration-300">
               <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-transparent bg-gradient-to-r from-indigo-400 to-indigo-300 bg-clip-text group-hover:from-indigo-300 group-hover:to-indigo-200 transition-all duration-300">
-                5+
+                3+
               </div>
               <div className="text-xs sm:text-sm text-gray-400 group-hover:text-gray-300 transition-colors leading-tight">
-                Years Experience
+                Years Learning
               </div>
             </div>
             <div className="text-center group hover:scale-105 transition-transform duration-300">
               <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-transparent bg-gradient-to-r from-slate-400 to-slate-300 bg-clip-text group-hover:from-slate-300 group-hover:to-slate-200 transition-all duration-300">
-                50+
+                15+
               </div>
               <div className="text-xs sm:text-sm text-gray-400 group-hover:text-gray-300 transition-colors leading-tight">
-                Projects Complete
+                Projects Built
               </div>
             </div>
             <div className="text-center group hover:scale-105 transition-transform duration-300">
               <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-transparent bg-gradient-to-r from-gray-400 to-gray-300 bg-clip-text group-hover:from-gray-300 group-hover:to-gray-200 transition-all duration-300">
-                100%
+                150+
               </div>
               <div className="text-xs sm:text-sm text-gray-400 group-hover:text-gray-300 transition-colors leading-tight">
-                Client Satisfaction
+                LeetCode Solved
               </div>
             </div>
           </div>

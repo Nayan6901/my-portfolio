@@ -162,9 +162,7 @@ const Skills = () => {
               <div className="text-2xl sm:text-3xl font-bold text-slate-400 mb-2 hover:animate-pulse">
                 3+
               </div>
-              <p className="text-xs sm:text-sm text-gray-400">
-                Years Learning
-              </p>
+              <p className="text-xs sm:text-sm text-gray-400">Years Learning</p>
             </div>
             <div
               className="text-center animate-fadeInUp hover:transform hover:scale-105 transition-all duration-300"
@@ -173,7 +171,9 @@ const Skills = () => {
               <div className="text-2xl sm:text-3xl font-bold text-gray-400 mb-2 hover:animate-pulse">
                 150+
               </div>
-              <p className="text-xs sm:text-sm text-gray-400">LeetCode Problems</p>
+              <p className="text-xs sm:text-sm text-gray-400">
+                LeetCode Problems
+              </p>
             </div>
             <div
               className="text-center animate-fadeInUp hover:transform hover:scale-105 transition-all duration-300"
