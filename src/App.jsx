@@ -68,8 +68,8 @@ function App() {
         </section>
       </main>
 
-      {/* Professional Footer */}
-      <footer className="relative z-10 bg-slate-900/90 backdrop-blur-sm border-t border-slate-600/30 py-6 sm:py-8">
+      {/* Professional Footer is */}
+      <footer className="relative z-10 bg-slate-900/90  backdrop-blur-sm border-t border-slate-600/30 py-6 sm:py-8">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-gray-400">
             © 2025 Student Portfolio • Built with React & Tailwind CSS • Open to
