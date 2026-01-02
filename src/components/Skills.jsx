@@ -42,30 +42,29 @@ const Skills = () => {
 
   const getColorClasses = (color) => {
     const colors = {
-      blue: "from-indigo-500 to-indigo-600 text-indigo-400 border-indigo-500/30",
-      purple: "from-slate-500 to-slate-600 text-slate-400 border-slate-500/30",
-      green: "from-indigo-500 to-slate-600 text-slate-400 border-slate-500/30",
+      blue: "from-blue-500 to-blue-600 text-blue-600 border-blue-500/30",
+      purple: "from-gray-500 to-gray-600 text-gray-600 border-gray-500/30",
+      green: "from-green-500 to-green-600 text-green-600 border-green-500/30",
       yellow:
-        "from-indigo-400 to-slate-500 text-indigo-300 border-indigo-400/30",
-      orange: "from-slate-500 to-gray-500 text-slate-400 border-slate-500/30",
-      red: "from-indigo-600 to-slate-600 text-indigo-400 border-indigo-500/30",
-      cyan: "from-gray-500 to-indigo-600 text-gray-400 border-gray-500/30",
+        "from-yellow-400 to-yellow-500 text-yellow-600 border-yellow-400/30",
+      orange:
+        "from-orange-500 to-orange-600 text-orange-600 border-orange-500/30",
+      red: "from-red-500 to-red-600 text-red-600 border-red-500/30",
+      cyan: "from-cyan-500 to-cyan-600 text-cyan-600 border-cyan-500/30",
     };
     return colors[color] || colors.blue;
   };
 
   return (
-    <div className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8">
+    <div className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12 sm:mb-16 animate-fadeIn">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 animate-fadeInUp">
-            <span className="bg-gradient-to-r from-indigo-400 via-slate-300 to-gray-400 bg-clip-text text-transparent">
-              Technical Skills
-            </span>
+            <span className="text-blue-600">Technical Skills</span>
           </h2>
           <p
-            className="text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto animate-fadeInUp"
+            className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto animate-fadeInUp"
             style={{ animationDelay: "0.2s" }}
           >
             Technologies and tools I use to bring ideas to life
@@ -77,14 +76,14 @@ const Skills = () => {
           {skillCategories.map((category, categoryIndex) => (
             <div
               key={category.title}
-              className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 sm:p-8 hover:border-indigo-500/50 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-indigo-500/10 animate-fadeInUp"
+              className="bg-white border border-gray-300 rounded-xl p-6 sm:p-8 hover:border-blue-500 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/10 animate-fadeInUp shadow-md"
               style={{ animationDelay: `${0.4 + categoryIndex * 0.2}s` }}
             >
               <div className="flex items-center mb-4 sm:mb-6">
                 <span className="text-2xl sm:text-3xl mr-3 sm:mr-4 hover:scale-125 transition-transform duration-300">
                   {category.icon}
                 </span>
-                <h3 className="text-lg sm:text-xl font-bold text-white hover:text-indigo-300 transition-colors duration-300">
+                <h3 className="text-lg sm:text-xl font-bold text-gray-900 hover:text-blue-600 transition-colors duration-300">
                   {category.title}
                 </h3>
               </div>
@@ -101,7 +100,7 @@ const Skills = () => {
                     }}
                   >
                     <div className="flex justify-between items-center mb-2">
-                      <span className="text-sm sm:text-base text-gray-300 font-medium hover:text-white transition-colors duration-300">
+                      <span className="text-sm sm:text-base text-gray-700 font-medium hover:text-gray-900 transition-colors duration-300">
                         {skill.name}
                       </span>
                       <span
@@ -112,7 +111,7 @@ const Skills = () => {
                         {skill.level}%
                       </span>
                     </div>
-                    <div className="w-full bg-slate-700 rounded-full h-2 overflow-hidden hover:h-3 transition-all duration-300">
+                    <div className="w-full bg-gray-200 rounded-full h-2 overflow-hidden hover:h-3 transition-all duration-300">
                       <div
                         className={`h-full bg-gradient-to-r ${
                           getColorClasses(skill.color).split(" ")[0]
@@ -138,10 +137,10 @@ const Skills = () => {
 
         {/* Professional Highlights */}
         <div
-          className="bg-gradient-to-r from-slate-800/50 via-indigo-900/20 to-slate-800/50 backdrop-blur-sm border border-indigo-500/20 rounded-xl p-6 sm:p-8 animate-fadeInUp hover:border-indigo-400/30 hover:shadow-2xl hover:shadow-indigo-500/10 transition-all duration-500"
+          className="bg-blue-50 border border-blue-200 rounded-xl p-6 sm:p-8 animate-fadeInUp hover:border-blue-400 hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 shadow-md"
           style={{ animationDelay: "1.2s" }}
         >
-          <h3 className="text-xl sm:text-2xl font-bold text-center mb-6 sm:mb-8 text-indigo-400 hover:text-indigo-300 transition-colors duration-300">
+          <h3 className="text-xl sm:text-2xl font-bold text-center mb-6 sm:mb-8 text-blue-600 hover:text-blue-700 transition-colors duration-300">
             Professional Highlights
           </h3>
 
@@ -150,28 +149,28 @@ const Skills = () => {
               className="text-center animate-fadeInUp hover:transform hover:scale-105 transition-all duration-300"
               style={{ animationDelay: "1.4s" }}
             >
-              <div className="text-2xl sm:text-3xl font-bold text-indigo-400 mb-2 hover:animate-pulse">
+              <div className="text-2xl sm:text-3xl font-bold text-blue-600 mb-2 hover:animate-pulse">
                 10+
               </div>
-              <p className="text-xs sm:text-sm text-gray-400">Technologies</p>
+              <p className="text-xs sm:text-sm text-gray-600">Technologies</p>
             </div>
             <div
               className="text-center animate-fadeInUp hover:transform hover:scale-105 transition-all duration-300"
               style={{ animationDelay: "1.6s" }}
             >
-              <div className="text-2xl sm:text-3xl font-bold text-slate-400 mb-2 hover:animate-pulse">
+              <div className="text-2xl sm:text-3xl font-bold text-gray-600 mb-2 hover:animate-pulse">
                 3+
               </div>
-              <p className="text-xs sm:text-sm text-gray-400">Years Learning</p>
+              <p className="text-xs sm:text-sm text-gray-600">Years Learning</p>
             </div>
             <div
               className="text-center animate-fadeInUp hover:transform hover:scale-105 transition-all duration-300"
               style={{ animationDelay: "1.8s" }}
             >
-              <div className="text-2xl sm:text-3xl font-bold text-gray-400 mb-2 hover:animate-pulse">
+              <div className="text-2xl sm:text-3xl font-bold text-gray-700 mb-2 hover:animate-pulse">
                 150+
               </div>
-              <p className="text-xs sm:text-sm text-gray-400">
+              <p className="text-xs sm:text-sm text-gray-600">
                 LeetCode Problems
               </p>
             </div>
@@ -179,10 +178,10 @@ const Skills = () => {
               className="text-center animate-fadeInUp hover:transform hover:scale-105 transition-all duration-300"
               style={{ animationDelay: "2s" }}
             >
-              <div className="text-2xl sm:text-3xl font-bold text-indigo-400 mb-2 hover:animate-pulse">
+              <div className="text-2xl sm:text-3xl font-bold text-blue-600 mb-2 hover:animate-pulse">
                 15+
               </div>
-              <p className="text-xs sm:text-sm text-gray-400">Projects Built</p>
+              <p className="text-xs sm:text-sm text-gray-600">Projects Built</p>
             </div>
           </div>
         </div>

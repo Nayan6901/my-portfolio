@@ -85,16 +85,14 @@ const Contact = () => {
   ];
 
   return (
-    <div className="py-20 px-4">
+    <div className="py-20 px-4 bg-white">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-indigo-400 via-slate-300 to-gray-400 bg-clip-text text-transparent">
-              Let's Connect
-            </span>
+            <span className="text-blue-600">Let's Connect</span>
           </h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Interested in collaborating on a project or have internship
             opportunities? I'd love to hear from you!
           </p>
@@ -129,7 +127,7 @@ const Contact = () => {
                   <div>
                     <label
                       htmlFor="name"
-                      className="block text-sm font-medium text-gray-300 mb-2"
+                      className="block text-sm font-medium text-gray-700 mb-2"
                     >
                       Full Name
                     </label>
@@ -140,14 +138,14 @@ const Contact = () => {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-slate-900/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors duration-300"
+                      className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg text-gray-900 placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors duration-300"
                       placeholder="Your full name"
                     />
                   </div>
                   <div>
                     <label
                       htmlFor="email"
-                      className="block text-sm font-medium text-gray-300 mb-2"
+                      className="block text-sm font-medium text-gray-700 mb-2"
                     >
                       Email Address
                     </label>
@@ -158,7 +156,7 @@ const Contact = () => {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-slate-900/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-indigo-500 transition-colors duration-300"
+                      className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg text-gray-900 placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors duration-300"
                       placeholder="your.email@example.com"
                     />
                   </div>
@@ -205,7 +203,7 @@ const Contact = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full py-3 px-6 bg-gradient-to-r from-indigo-600 to-slate-600 hover:from-indigo-700 hover:to-slate-700 disabled:from-gray-600 disabled:to-gray-700 text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105 disabled:scale-100 disabled:cursor-not-allowed"
+                  className="w-full py-3 px-6 bg-blue-600 hover:bg-blue-700 disabled:from-gray-600 disabled:to-gray-700 text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105 disabled:scale-100 disabled:cursor-not-allowed"
                 >
                   {isSubmitting ? "Sending..." : "Send Message"}
                 </button>
@@ -224,7 +222,7 @@ const Contact = () => {
               <div className="space-y-4">
                 {contactInfo.map((info, index) => (
                   <div key={index} className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-indigo-500/20 to-slate-500/20 rounded-lg flex items-center justify-center text-2xl border border-indigo-500/30">
+                    <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-2xl border border-blue-300">
                       {info.icon}
                     </div>
                     <div>
@@ -266,14 +264,14 @@ const Contact = () => {
             </div>
 
             {/* Availability */}
-            <div className="bg-gradient-to-r from-indigo-500/10 to-slate-500/10 border border-indigo-500/30 rounded-xl p-6">
+            <div className="bg-blue-100 border border-blue-300 rounded-xl p-6 shadow-md">
               <div className="flex items-center space-x-3 mb-3">
                 <div className="w-3 h-3 bg-indigo-400 rounded-full animate-pulse"></div>
                 <span className="text-indigo-400 font-semibold">
                   Available for Opportunities
                 </span>
               </div>
-              <p className="text-gray-300 text-sm">
+              <p className="text-gray-700 text-sm">
                 Currently seeking internships and entry-level positions.
                 Response time: Usually within 24 hours.
               </p>
@@ -283,7 +281,7 @@ const Contact = () => {
 
         {/* Call to Action */}
         <div className="text-center mt-16">
-          <div className="bg-gradient-to-r from-slate-800/50 via-indigo-900/20 to-slate-800/50 rounded-xl p-8 border border-indigo-500/20">
+          <div className="bg-blue-50 rounded-xl p-8 border border-blue-200 shadow-md">
             <h3 className="text-2xl font-bold text-white mb-4">
               Ready to Connect?
             </h3>
@@ -295,7 +293,7 @@ const Contact = () => {
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <a
                 href="mailto:nayanstudent@example.com"
-                className="px-8 py-3 bg-gradient-to-r from-indigo-600 to-slate-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-slate-700 transition-all duration-300 hover:scale-105"
+                className="px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-all duration-300 hover:scale-105"
               >
                 Email Me Directly
               </a>

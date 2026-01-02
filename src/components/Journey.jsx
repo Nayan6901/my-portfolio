@@ -28,75 +28,83 @@ const Journey = () => {
       period: "2022 - First Steps",
       type: "Learning Phase",
       description:
-        "Started my programming journey with Java and fundamental concepts. Discovered the beauty of problem-solving through code and began building my logical thinking skills with data structures and algorithms.",
+        "Started my programming journey with Java and fundamental concepts. Built console applications and developed strong programming fundamentals.",
       achievements: [
         "Learned Java programming from scratch",
         "Mastered fundamental programming concepts",
-        "Started solving basic coding problems",
         "Built first console applications in Java",
+        "Developed problem-solving skills through coding",
       ],
       technologies: [
         "Java",
         "OOP Concepts",
-        "Data Structures",
-        "Basic Algorithms",
-        "Problem Solving",
+        "Variables & Control Flow",
+        "File Handling",
+        "Basic Projects",
         "Git",
       ],
       icon: "☕",
       color: "blue",
+      metrics: {
+        main: "Java Foundation",
+        secondary: "OOP Mastered",
+      },
     },
     {
       id: 2,
-      title: "Web Development & LeetCode Journey",
-      period: "2023 - Dual Focus",
+      title: "Web Development Focus",
+      period: "2023 - Building Phase",
       type: "Skill Expansion",
       description:
-        "Expanded into web development while continuing to strengthen my algorithmic skills. Started building web applications with modern technologies and consistently practiced coding challenges to improve problem-solving abilities.",
+        "Transitioned into modern web development with a focus on creating responsive and interactive web applications using React and contemporary web technologies.",
       achievements: [
         "Learned HTML, CSS, JavaScript, and React",
-        "Solved 150+ LeetCode problems in Java",
-        "Built 15+ responsive web applications",
+        "Built 5 responsive web applications",
         "Mastered modern web development frameworks",
+        "Created professional portfolio projects",
       ],
       technologies: [
         "React",
         "JavaScript ES6+",
         "HTML5 & CSS3",
-        "Java",
-        "LeetCode",
         "Tailwind CSS",
         "Responsive Design",
-        "Problem Solving",
+        "Web Performance",
       ],
-      icon: "�",
+      icon: "💻",
       color: "purple",
+      metrics: {
+        main: "5 Projects Built",
+        secondary: "React Expert",
+      },
     },
     {
       id: 3,
-      title: "Full-Stack Learning Journey",
+      title: "Full-Stack Developer Journey",
       period: "2024 - Present",
       type: "Advanced Learning",
       description:
-        "Currently expanding into full-stack development with strong algorithmic foundation. Building complete web applications while maintaining competitive programming skills. Actively learning and preparing for my future career in software development.",
+        "Currently building complete end-to-end web applications with a full-stack approach. Learning backend technologies to complement my frontend expertise.",
       achievements: [
         "Learning full-stack development with MERN stack",
-        "Continuing LeetCode practice for skill improvement",
+        "Building complete web applications",
         "Creating portfolio projects to showcase abilities",
-        "Preparing for internships and entry-level positions",
+        "Preparing for software developer positions",
       ],
       technologies: [
         "React",
         "Node.js",
         "MongoDB",
         "Express.js",
-        "Java",
-        "LeetCode",
-        "Full-Stack Learning",
-        "Cloud Deployment",
+        "Backend Development",
+        "Database Design",
       ],
-      icon: "�",
+      icon: "🚀",
       color: "green",
+      metrics: {
+        main: "Full-Stack Ready",
+        secondary: "Production Apps",
+      },
     },
   ];
 
@@ -122,150 +130,183 @@ const Journey = () => {
   ];
   const getColorClasses = (color) => {
     const colors = {
-      blue: "border-indigo-500/30 text-indigo-400",
-      purple: "border-slate-500/30 text-slate-400",
-      green: "border-gray-500/30 text-gray-400",
-      orange: "border-indigo-500/30 text-indigo-400",
+      blue: "border-blue-300 text-blue-600",
+      purple: "border-gray-300 text-gray-600",
+      green: "border-green-300 text-green-600",
+      orange: "border-orange-300 text-orange-600",
     };
     return colors[color] || colors.blue;
   };
 
   return (
-    <div id="journey" className="py-20 px-4">
+    <div id="journey" className="py-20 px-4 bg-white">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-indigo-400 via-slate-300 to-gray-400 bg-clip-text text-transparent">
-              My Learning Journey
-            </span>
+            <span className="text-blue-600">My Learning Journey</span>
           </h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Student journey from programming fundamentals to full-stack
             development - learning, building, and growing in code
           </p>
         </div>
 
-        {/* Timeline */}
-        <div className="relative mb-20">
-          {/* Timeline Line */}
-          <div className="absolute left-8 md:left-1/2 md:transform md:-translate-x-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-indigo-500 via-slate-500 to-gray-500"></div>
+        {/* Achievement-Focused Progression */}
+        <div className="space-y-6 mb-20">
+          {/* Timeline Visualization */}
+          <div className="flex justify-between items-start md:items-center relative mb-12">
+            {/* Connecting Line */}
+            <div className="hidden md:block absolute top-8 left-0 right-0 h-1 bg-gradient-to-r from-blue-600 via-blue-500 to-green-600 z-0"></div>
 
-          {/* Journey Items */}
-          <div className="space-y-12">
+            {/* Year Markers */}
             {journey.map((item, index) => (
               <div
                 key={item.id}
-                className={`flex items-center ${
-                  index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-                } flex-col`}
+                className="relative z-10 flex flex-col items-center w-full md:w-auto"
               >
-                {/* Timeline Node */}
-                <div className="absolute left-8 md:left-1/2 md:transform md:-translate-x-1/2 w-4 h-4 bg-gradient-to-r from-indigo-500 to-slate-500 rounded-full border-4 border-slate-900 z-10"></div>
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-blue-700 rounded-full flex items-center justify-center mb-2 border-4 border-white shadow-lg">
+                  <span className="text-2xl">{item.icon}</span>
+                </div>
+                <p className="text-sm font-bold text-gray-900">
+                  {item.period.split(" - ")[0]}
+                </p>
+              </div>
+            ))}
+          </div>
 
-                {/* Content Card */}
+          {/* Achievement Cards */}
+          <div className="grid md:grid-cols-3 gap-8">
+            {journey.map((item, index) => {
+              const achievements = [
+                item.id === 1
+                  ? "150+ LeetCode"
+                  : item.id === 2
+                  ? "150+ LeetCode"
+                  : "MERN Stack",
+                item.id === 1
+                  ? "OOP Mastery"
+                  : item.id === 2
+                  ? "15+ Projects"
+                  : "Internship Ready",
+              ];
+              return (
                 <div
-                  className={`w-full md:w-5/12 ml-20 md:ml-0 ${
-                    index % 2 === 0
-                      ? "md:mr-auto md:pr-12"
-                      : "md:ml-auto md:pl-12"
-                  }`}
+                  key={item.id}
+                  className="group relative bg-white rounded-2xl border-2 border-gray-300 p-8 hover:border-blue-600 transition-all duration-500 hover:shadow-2xl hover:scale-105"
                 >
-                  <div
-                    className={`bg-slate-800/50 backdrop-blur-sm border ${getColorClasses(
-                      item.color
-                    )} rounded-xl p-6 hover:border-opacity-70 transition-all duration-300 hover:transform hover:scale-105`}
-                  >
-                    {/* Header */}
-                    <div className="mb-4">
-                      <div className="flex items-start justify-between mb-2">
-                        <div className="flex items-center">
-                          <span className="text-2xl mr-3">{item.icon}</span>
-                          <h3 className="text-xl font-bold text-white">
-                            {item.title}
-                          </h3>
-                        </div>
-                        <span
-                          className={`px-3 py-1 ${getColorClasses(
-                            item.color
-                          )} border rounded-full text-xs font-medium`}
-                        >
-                          {item.type}
+                  {/* Year Header */}
+                  <div className="mb-6">
+                    <h3 className="text-3xl font-black text-blue-600 mb-2">
+                      {item.period.split(" - ")[0]}
+                    </h3>
+                    <h4 className="text-lg font-bold text-gray-900 mb-1">
+                      {item.title}
+                    </h4>
+                    <p className="text-sm text-gray-600">{item.type}</p>
+                  </div>
+
+                  {/* Divider */}
+                  <div className="w-full h-1 bg-blue-600 rounded-full mb-6"></div>
+
+                  {/* Key Numbers/Achievements - PROMINENT */}
+                  <div className="mb-6">
+                    <h4 className="text-xs uppercase tracking-widest font-black text-blue-600 mb-4">
+                      📊 Key Metrics
+                    </h4>
+                    <div className="space-y-3">
+                      <div className="flex justify-between items-center">
+                        <span className="text-gray-700 font-semibold">
+                          {item.metrics?.main || "Achievement"}
+                        </span>
+                        <span className="text-2xl font-black text-blue-600">
+                          ✓
                         </span>
                       </div>
-                      <p className="text-gray-400 text-sm ml-11">
-                        {item.period}
-                      </p>
-                    </div>
-
-                    {/* Description */}
-                    <p className="text-gray-300 mb-4 leading-relaxed">
-                      {item.description}
-                    </p>
-
-                    {/* Achievements */}
-                    <div className="mb-4">
-                      <h4 className="text-emerald-400 font-semibold mb-2">
-                        Key Milestones:
-                      </h4>
-                      <ul className="space-y-1">
-                        {item.achievements.map((achievement, i) => (
-                          <li
-                            key={i}
-                            className="text-gray-400 text-sm flex items-start"
-                          >
-                            <span className="text-emerald-400 mr-2 mt-1">
-                              •
-                            </span>
-                            {achievement}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    {/* Technologies */}
-                    <div>
-                      <h4 className="text-indigo-400 font-semibold mb-2">
-                        Skills Learned:
-                      </h4>
-                      <div className="flex flex-wrap gap-2">
-                        {item.technologies.map((tech, i) => (
-                          <span
-                            key={i}
-                            className="px-3 py-1 bg-indigo-500/10 border border-indigo-500/30 text-indigo-400 text-xs rounded-full hover:bg-indigo-500/20 transition-colors"
-                          >
-                            {tech}
-                          </span>
-                        ))}
+                      <div className="flex justify-between items-center">
+                        <span className="text-gray-700 font-semibold">
+                          {item.metrics?.secondary || "Skills"}
+                        </span>
+                        <span className="text-2xl font-black text-blue-600">
+                          ✓
+                        </span>
                       </div>
                     </div>
                   </div>
+
+                  {/* Core Skills */}
+                  <div className="mb-6">
+                    <h4 className="text-xs uppercase tracking-widest font-black text-gray-700 mb-3">
+                      💻 Tech Stack
+                    </h4>
+                    <div className="flex flex-wrap gap-2">
+                      {item.technologies.slice(0, 5).map((tech, i) => (
+                        <span
+                          key={i}
+                          className="px-3 py-1 bg-blue-100 border border-blue-300 text-blue-700 text-xs font-semibold rounded-full"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* What You'll Learn */}
+                  <div>
+                    <h4 className="text-xs uppercase tracking-widest font-black text-gray-700 mb-3">
+                      🎯 Highlights
+                    </h4>
+                    <ul className="space-y-2">
+                      {item.achievements.slice(0, 3).map((achievement, i) => (
+                        <li
+                          key={i}
+                          className="text-sm text-gray-700 flex items-start"
+                        >
+                          <span className="text-blue-600 mr-2 font-bold">
+                            →
+                          </span>
+                          <span>{achievement}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  {/* Status Badge */}
+                  <div className="mt-6 pt-4 border-t border-gray-200">
+                    <span
+                      className={`inline-block px-4 py-2 rounded-full text-xs font-black tracking-wide ${
+                        item.id === 3
+                          ? "bg-green-100 text-green-700"
+                          : "bg-blue-100 text-blue-700"
+                      }`}
+                    >
+                      {item.id === 3 ? "🚀 ACTIVE NOW" : "✓ COMPLETED"}
+                    </span>
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
 
         {/* Education Section */}
         <div>
           <h3 className="text-3xl font-bold text-center mb-12">
-            <span className="bg-gradient-to-r from-indigo-400 via-slate-300 to-gray-400 bg-clip-text text-transparent">
-              Education & Learning Path
-            </span>
+            <span className="text-blue-600">Education & Learning Path</span>
           </h3>
 
           <div className="grid md:grid-cols-2 gap-8">
             {education.map((edu, index) => (
               <div
                 key={edu.degree}
-                className={`bg-slate-800/50 backdrop-blur-sm border ${getColorClasses(
+                className={`bg-white border ${getColorClasses(
                   edu.color
-                )} rounded-xl p-6 hover:border-opacity-70 transition-all duration-300 hover:transform hover:scale-105`}
+                )} rounded-xl p-6 hover:border-opacity-70 transition-all duration-300 hover:transform hover:scale-105 shadow-md`}
               >
                 <div className="flex items-start mb-4">
                   <span className="text-3xl mr-4">{edu.icon}</span>
                   <div className="flex-1">
-                    <h4 className="text-xl font-bold text-white mb-1">
+                    <h4 className="text-xl font-bold text-gray-900 mb-1">
                       {edu.degree}
                     </h4>
                     <p
@@ -274,8 +315,8 @@ const Journey = () => {
                       {edu.school}
                     </p>
                     <div className="flex justify-between items-center mt-2">
-                      <p className="text-gray-400">{edu.period}</p>
-                      <p className="text-blue-400 font-semibold">{edu.gpa}</p>
+                      <p className="text-gray-600">{edu.period}</p>
+                      <p className="text-blue-600 font-semibold">{edu.gpa}</p>
                     </div>
                   </div>
                 </div>
@@ -285,34 +326,6 @@ const Journey = () => {
                 </p>
               </div>
             ))}
-          </div>
-        </div>
-
-        {/* Student Goals Section */}
-        <div className="mt-20 text-center">
-          <div className="bg-gradient-to-r from-indigo-500/10 via-slate-500/10 to-gray-500/10 backdrop-blur-sm border border-indigo-500/20 rounded-xl p-8">
-            <h3 className="text-2xl font-bold text-white mb-4">
-              <span className="text-indigo-400">🎯</span> My Aspirations
-            </h3>
-            <p className="text-gray-300 text-lg leading-relaxed max-w-3xl mx-auto">
-              As a passionate programming student, my goal is to land an
-              internship or entry-level software developer position where I can
-              apply my web development skills and algorithmic problem-solving
-              abilities. I'm actively learning, building projects, and preparing
-              for technical interviews while staying updated with the latest
-              technologies.
-            </p>
-            <div className="mt-6 flex flex-wrap justify-center gap-3">
-              <span className="px-4 py-2 bg-indigo-500/20 border border-indigo-500/40 text-indigo-300 rounded-full">
-                🎓 Student Developer
-              </span>
-              <span className="px-4 py-2 bg-slate-500/20 border border-slate-500/40 text-slate-300 rounded-full">
-                💼 Seeking Internships
-              </span>
-              <span className="px-4 py-2 bg-gray-500/20 border border-gray-500/40 text-gray-300 rounded-full">
-                🚀 Java + React
-              </span>
-            </div>
           </div>
         </div>
       </div>

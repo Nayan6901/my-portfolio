@@ -141,16 +141,14 @@ const Projects = () => {
   const featuredProjects = projects.filter((project) => project.featured);
 
   return (
-    <div className="py-20 px-4">
+    <div className="py-20 px-4 bg-white">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-indigo-400 via-slate-300 to-gray-400 bg-clip-text text-transparent">
-              Featured Projects
-            </span>
+            <span className="text-blue-600">Featured Projects</span>
           </h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             A showcase of my recent work and the technologies I love to build
             with
           </p>
@@ -164,8 +162,8 @@ const Projects = () => {
               onClick={() => setFilter(category.id)}
               className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
                 filter === category.id
-                  ? "bg-gradient-to-r from-indigo-600 to-slate-600 text-white"
-                  : "bg-slate-800/50 text-gray-400 hover:text-white hover:bg-slate-700/50"
+                  ? "bg-blue-600 text-white"
+                  : "bg-white text-gray-600 hover:text-gray-900 hover:bg-gray-100 border border-gray-300"
               }`}
             >
               {category.name}
@@ -178,24 +176,24 @@ const Projects = () => {
           {featuredProjects.slice(0, 2).map((project) => (
             <div
               key={project.id}
-              className="group bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl overflow-hidden hover:border-indigo-500/50 transition-all duration-300 hover:transform hover:scale-105"
+              className="group bg-white border border-gray-300 rounded-xl overflow-hidden hover:border-blue-500 transition-all duration-300 hover:transform hover:scale-105 shadow-md"
             >
               {/* Project Image/Icon */}
-              <div className="h-48 bg-gradient-to-br from-indigo-600/20 via-slate-600/20 to-gray-600/20 flex items-center justify-center text-6xl">
+              <div className="h-48 bg-gradient-to-br from-blue-100 via-blue-50 to-gray-100 flex items-center justify-center text-6xl">
                 {project.image}
               </div>
 
               <div className="p-6">
                 {/* Project Header */}
                 <div className="flex items-start justify-between mb-4">
-                  <h3 className="text-xl font-bold text-white group-hover:text-indigo-400 transition-colors">
+                  <h3 className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
                     {project.title}
                   </h3>
                   <span
                     className={`px-3 py-1 rounded-full text-xs font-medium ${
                       project.status === "Live"
-                        ? "bg-green-500/20 text-green-400 border border-green-500/30"
-                        : "bg-yellow-500/20 text-yellow-400 border border-yellow-500/30"
+                        ? "bg-green-100 text-green-700 border border-green-300"
+                        : "bg-yellow-100 text-yellow-700 border border-yellow-300"
                     }`}
                   >
                     {project.status}
@@ -246,7 +244,7 @@ const Projects = () => {
                   {project.live && (
                     <a
                       href={project.live}
-                      className="flex-1 flex items-center justify-center py-2 px-4 bg-gradient-to-r from-indigo-600 to-slate-600 hover:from-indigo-700 hover:to-slate-700 text-white rounded-lg transition-all duration-300"
+                      className="flex-1 flex items-center justify-center py-2 px-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-all duration-300"
                     >
                       Live Demo
                     </a>
@@ -264,10 +262,10 @@ const Projects = () => {
             .map((project) => (
               <div
                 key={project.id}
-                className="group bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl overflow-hidden hover:border-indigo-500/50 transition-all duration-300 hover:transform hover:scale-105"
+                className="group bg-white border border-gray-300 rounded-xl overflow-hidden hover:border-blue-500 transition-all duration-300 hover:transform hover:scale-105 shadow-md"
               >
                 {/* Project Icon */}
-                <div className="h-32 bg-gradient-to-br from-slate-700 to-slate-800 flex items-center justify-center text-3xl">
+                <div className="h-32 bg-gradient-to-br from-blue-100 to-gray-100 flex items-center justify-center text-3xl">
                   {project.image}
                 </div>
 
@@ -336,7 +334,7 @@ const Projects = () => {
 
         {/* Call to Action */}
         <div className="text-center mt-16">
-          <div className="bg-gradient-to-r from-slate-800/50 via-indigo-900/20 to-slate-800/50 rounded-xl p-8 border border-indigo-500/20">
+          <div className="bg-blue-50 rounded-xl p-8 border border-blue-200 shadow-md">
             <h3 className="text-2xl font-bold text-white mb-4">
               Interested in Working Together?
             </h3>
@@ -346,7 +344,7 @@ const Projects = () => {
             </p>
             <a
               href="#contact"
-              className="inline-block px-8 py-3 bg-gradient-to-r from-indigo-600 to-slate-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-slate-700 transition-all duration-300 hover:scale-105"
+              className="inline-block px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-all duration-300 hover:scale-105"
             >
               Start a Project
             </a>

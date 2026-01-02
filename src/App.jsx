@@ -25,19 +25,18 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-gray-900 text-white overflow-x-hidden">
+    <div className="min-h-screen bg-white text-gray-900 overflow-x-hidden">
       {/* Scroll Progress Indicator */}
-      <div className="fixed top-0 left-0 w-full h-1 bg-slate-800/50 z-50">
+      <div className="fixed top-0 left-0 w-full h-1 bg-gray-200 z-50">
         <div
-          className="h-full bg-gradient-to-r from-indigo-500 via-slate-400 to-gray-500 transition-all duration-150 ease-out"
+          className="h-full bg-gradient-to-r from-blue-600 to-blue-500 transition-all duration-150 ease-out"
           style={{ width: `${scrollProgress * 100}%` }}
         ></div>
       </div>
 
       {/* Subtle professional background */}
-      <div className="fixed inset-0 opacity-10">
-        <div className="absolute inset-0 bg-gradient-to-r from-indigo-900/20 via-slate-800/20 to-gray-900/20"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_50%)]"></div>
+      <div className="fixed inset-0 opacity-5">
+        <div className="absolute inset-0 bg-gradient-to-b from-blue-50 via-white to-gray-50"></div>
       </div>
 
       <Navigation />
@@ -69,7 +68,7 @@ function App() {
       </main>
 
       {/* Professional Footer is */}
-      <footer className="relative z-10 bg-slate-900/90  backdrop-blur-sm border-t border-slate-600/30 py-6 sm:py-8">
+      <footer className="relative z-10 bg-gray-900 text-white py-6 sm:py-8 border-t border-gray-200">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-gray-400">
             © 2025 Student Portfolio • Built with React & Tailwind CSS • Open to
@@ -78,19 +77,19 @@ function App() {
           <div className="flex justify-center space-x-6 mt-4">
             <a
               href="https://linkedin.com"
-              className="text-slate-400 hover:text-slate-300 transition-colors duration-300"
+              className="text-gray-400 hover:text-white transition-colors duration-300"
             >
               LinkedIn
             </a>
             <a
               href="https://github.com"
-              className="text-slate-400 hover:text-slate-300 transition-colors duration-300"
+              className="text-gray-400 hover:text-white transition-colors duration-300"
             >
               GitHub
             </a>
             <a
               href="mailto:contact@example.com"
-              className="text-slate-400 hover:text-slate-300 transition-colors duration-300"
+              className="text-gray-400 hover:text-white transition-colors duration-300"
             >
               Email
             </a>
@@ -102,7 +101,7 @@ function App() {
       {scrollProgress > 0.1 && (
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="fixed bottom-6 right-6 z-50 w-12 h-12 bg-gradient-to-r from-indigo-600 to-slate-600 hover:from-indigo-700 hover:to-slate-700 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center group hover:scale-110"
+          className="fixed bottom-6 right-6 z-50 w-12 h-12 bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center group hover:scale-110"
           aria-label="Scroll to top"
         >
           <svg
